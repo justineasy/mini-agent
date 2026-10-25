@@ -11,15 +11,28 @@ A simple AI agent CLI for testing agent harness capabilities. Uses Anthropic Cla
 - ✅ Prompt injection resistant
 - ✅ Unicode support (emoji, Chinese, etc.)
 - ✅ Graceful error handling
-
 ## Usage
 
+### Standalone (any system)
+```bash
+# Install
+pip install -r requirements.txt
+
+# Set API key
+export ANTHROPIC_API_KEY=sk-...  # Linux/Mac
+set ANTHROPIC_API_KEY=sk-...     # Windows
+
+# Run
+python mini_agent_standalone.py "how many lines in notes.txt?"
+python mini_agent_standalone.py "make hello.txt that says hi"
+python mini_agent_standalone.py "what is 2+2?"
+```
+
+### In omp (uses your subscription)
 ```python
-# In omp eval:
 %load mini_agent.py
 await run_agent("your task here")
 ```
-
 ## Test Results
 
 | Level | Tests | Status |
