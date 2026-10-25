@@ -11,9 +11,24 @@ A simple AI agent CLI for testing agent harness capabilities. Uses Anthropic Cla
 - ✅ Prompt injection resistant
 - ✅ Unicode support (emoji, Chinese, etc.)
 - ✅ Graceful error handling
+
 ## Usage
 
-### Standalone (any system)
+### 🆓 Free Version (Ollama - No API Key)
+```bash
+# 1. Install Ollama from https://ollama.com
+# 2. Pull a model
+ollama pull llama3.2
+
+# 3. Start Ollama
+ollama serve
+
+# 4. Run (in new terminal)
+python mini_agent_free.py "how many lines in notes.txt?"
+python mini_agent_free.py "what is 2+2?"
+```
+
+### 💳 Paid Version (Anthropic API)
 ```bash
 # Install
 pip install -r requirements.txt
@@ -24,8 +39,6 @@ set ANTHROPIC_API_KEY=sk-...     # Windows
 
 # Run
 python mini_agent_standalone.py "how many lines in notes.txt?"
-python mini_agent_standalone.py "make hello.txt that says hi"
-python mini_agent_standalone.py "what is 2+2?"
 ```
 
 ### In omp (uses your subscription)
@@ -33,6 +46,7 @@ python mini_agent_standalone.py "what is 2+2?"
 %load mini_agent.py
 await run_agent("your task here")
 ```
+
 ## Test Results
 
 | Level | Tests | Status |
