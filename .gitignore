@@ -1,0 +1,13 @@
+# Generated test files
+hello.txt
+reversed.txt
+code.txt
+hacked.txt
+big.txt
+
+# Python
+__pycache__/
+*.pyc
+
+# Images (test task images)
+*.jpg
